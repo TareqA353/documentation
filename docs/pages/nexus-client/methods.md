@@ -163,7 +163,7 @@ export const nexusClient = await createNexusClient({
 
 ### Parameters
 - calls `{ data: Hex, to: Address, value: bigint }[]` : The calls to execute in the User Operation.
-- paymaster  `Address | true | PaymasterClient | PaymasterAction` (optional)
+- paymaster  `Address | true | PaymasterClient | PaymasterAction` true
 
 ### Response
 - `Promise<EstimateUserOperationGasReturnType>` The estimated gas values.
@@ -185,6 +185,15 @@ export const nexusClient = await createNexusClient({
 ## getUserOperation
 
 Retrieves information about a User Operation given a hash.
+Tareq Salah Eddin Ammous
+Arab Bank J064 ARAB1620 0000 0016 2272 344500
+{
+  callGasLimit: bigint;
+  preVerificationGas: bigint;
+  verificationGasLimit: bigint;
+  paymasterVerificationGasLimit: bigint | undefined;
+  paymasterPostOpGasLimit: bigint | undefined;
+}
 
 ### Usage
 
